@@ -5,13 +5,13 @@
 		<second ref='coma'></second>
 		<button @click="handeRef">通过ref获取子组件</button>
 		<!--访问slot内容-->
-		<child-component>
+		<child-component :count="1">
 			<h2 slot="header">标题</h2>
 			<p>正文内容</p>
 			<p>更多的正文内容</p>
 			<div slot="footer">底部信息</div>
 		</child-component>
-		
+
     </div>
 			
 </template> 
