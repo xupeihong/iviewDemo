@@ -1,17 +1,23 @@
 <template>
 	<div id="index_main">	
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-			in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			<a href="#">	
-			<user></user>	
-		</a>	
-		<button @click="handeRef">通过ref获取子组件</button>	
-		<second ref='coma'></second>	
-	</div>
-</template>
+		<user></user>	
+		<a href="#"></a>
+		<second ref='coma'></second>
+		<button @click="handeRef">通过ref获取子组件</button>
+		<!--访问slot内容-->
+		<child-component>
+			<h2 slot="header">标题</h2>
+			<p>正文内容</p>
+			<p>更多的正文内容</p>
+			<div slot="footer">底部信息</div>
+		</child-component>
+    </div>
+			
+</template> 
 <script>
 	import user from '@/components/user'	
 	import second from '@/components/second'	
+	import childComponent from '@/components/childComponent'
 	export default {	
 		name: 'index_main',	
 		data() {	
@@ -19,7 +25,8 @@
 		},	
 		components: {	
 			user,	
-			second	
+			second,
+			childComponent	
 		},	
 		methods: {	
 			handeRef() {	
