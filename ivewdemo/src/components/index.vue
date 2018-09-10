@@ -11,6 +11,7 @@
 			<p>更多的正文内容</p>
 			<div slot="footer">底部信息</div>
 		</child-component>
+		
     </div>
 			
 </template> 
