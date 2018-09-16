@@ -11,7 +11,8 @@
 			<p>更多的正文内容</p>
 			<div slot="footer">底部信息</div>
 		</child-component>
-
+   <div id='div' v-show="showDiv">测试文本内容</div>
+   <button @click="getText">获取</button>
     </div>
 			
 </template> 
@@ -19,10 +20,13 @@
 	import user from '@/components/user'	
 	import second from '@/components/second'	
 	import childComponent from '@/components/childComponent'
+	import $ from 'jquery'
 	export default {	
 		name: 'index_main',	
 		data() {	
-			return {}	
+			return {
+				showDiv:false
+			}	
 		},	
 		components: {	
 			user,	
@@ -32,8 +36,16 @@
 		methods: {	
 			handeRef() {	
 				var msg = this.$refs.coma.message;	
-				console.log(msg)	
-			}	
+				console.log(msg)
+					
+			},
+			getText(){
+				this.showDiv=true;
+				// console.log($('#div').text());
+				this.$nextTick(function(){
+					console.log($('#div').text());
+				})
+			}
 		}	
 	}
 </script>

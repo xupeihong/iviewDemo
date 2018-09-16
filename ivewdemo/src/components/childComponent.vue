@@ -36,8 +36,8 @@
             var header=this.$slots.header;
             var main=this.$slots.default;
             var footer=this.$slots.footer;
-            console.log(footer);
-            console.log(footer[0].elm.innerHTML);
+            // console.log(footer);
+            // console.log(footer[0].elm.innerHTML);
         }
     }
 </script>
