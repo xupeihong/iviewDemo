@@ -36,7 +36,7 @@
 		methods: {	
 			handeRef() {	
 				var msg = this.$refs.coma.message;	
-				console.log(msg)
+				console.log(msg);
 					
 			},
 			getText(){
