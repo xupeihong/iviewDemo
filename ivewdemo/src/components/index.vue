@@ -46,7 +46,7 @@
 					console.log($('#div').text());
 				})
 			}
-		}	
+		}	 
 	}
 </script>
 <style scoped>
